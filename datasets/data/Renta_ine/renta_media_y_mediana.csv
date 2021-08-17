@@ -6140,7 +6140,7 @@ location_raw;Renta neta media por persona ;Renta neta media por hogar;Media de l
 4801302009 Barakaldo sección 02009;12.084;28.459;17.230;17.150;13.755;32.394
 4801302010 Barakaldo sección 02010;12.330;31.282;18.223;17.850;14.228;36.095
 4801302011 Barakaldo sección 02011;18.326;46.155;27.955;26.250;22.532;56.746
-Barakaldo sección 02012;14.272;35.657;21.198;20.650;17.064;42.630
+4801302012 Barakaldo sección 02012;14.272;35.657;21.198;20.650;17.064;42.630
 4801303 Barakaldo distrito 03;12.403;28.882;17.795;16.450;14.238;33.156
 4801303001 Barakaldo sección 03001;11.229;25.219;15.948;15.050;12.589;28.273
 4801303002 Barakaldo sección 03002;12.544;31.022;18.533;17.150;14.535;35.946
@@ -18542,9 +18542,9 @@ Barakaldo sección 02012;14.272;35.657;21.198;20.650;17.064;42.630
 0808601005 Franqueses del Vallès, Les sección 01005;11.864;34.793;18.693;17.850;14.119;41.406
 0808601006 Franqueses del Vallès, Les sección 01006;14.248;41.830;22.592;20.650;17.582;51.621
 0808601007 Franqueses del Vallès, Les sección 01007;13.903;38.398;21.618;19.950;17.040;47.059
-Franqueses del Vallès, Les sección 01008;11.383;29.796;17.238;17.150;13.393;35.058
-Franqueses del Vallès, Les sección 01009;13.055;34.349;19.986;19.250;15.927;41.906
-Franqueses del Vallès, Les sección 01010;11.915;35.324;18.482;18.550;14.089;41.770
+0808601008 Franqueses del Vallès, Les sección 01008;11.383;29.796;17.238;17.150;13.393;35.058
+0808601009 Franqueses del Vallès, Les sección 01009;13.055;34.349;19.986;19.250;15.927;41.906
+0808601010 Franqueses del Vallès, Les sección 01010;11.915;35.324;18.482;18.550;14.089;41.770
 0808602 Franqueses del Vallès, Les distrito 02;17.247;49.002;27.489;22.750;21.968;62.416
 0808602001 Franqueses del Vallès, Les sección 02001;17.247;49.002;27.489;22.750;21.968;62.416
 50110 Frasno, El;11.873;24.807;16.575;14.350;13.914;29.071
@@ -21166,7 +21166,7 @@ Franqueses del Vallès, Les sección 01010;11.915;35.324;18.482;18.550;14.089;41
 4307001 Guiamets, Els distrito 01;13.194;32.986;19.738;18.200;15.471;38.678
 4307001001 Guiamets, Els sección 01001;13.194;32.986;19.738;18.200;15.471;38.678
 14902 Guijarrosa, La;7.742;19.642;11.524;11.550;8.471;21.492
-Guijarrosa, La distrito 01;7.742;19.642;11.524;11.550;8.471;21.492
+1490201 Guijarrosa, La distrito 01;7.742;19.642;11.524;11.550;8.471;21.492
 1490201001 Guijarrosa, La sección 01001;7.742;19.642;11.524;11.550;8.471;21.492
 37155 Guijo de Ávila;.;.;.;.;.;.
 3715501 Guijo de Ávila distrito 01;.;.;.;.;.;.
@@ -55244,9 +55244,3 @@ Guijarrosa, La distrito 01;7.742;19.642;11.524;11.550;8.471;21.492
 0410301001 Zurgena sección 01001;8.273;18.827;12.112;10.850;9.257;21.067
 0410302 Zurgena distrito 02;8.133;19.179;12.655;11.550;9.068;21.383
 0410302001 Zurgena sección 02001;8.133;19.179;12.655;11.550;9.068;21.383
-Notas:;;;;;;
-;;;;;;
-.;;;;;;
-Estadística experimental;;;;;;
-La renta por unidad de consumo se obtiene, para cada hogar, dividiendo los ingresos netos totales del hogar entre el número de unidades de consumo. Se toma la distribución de personas.;;;;;;
-Fuente: ;;;;;;

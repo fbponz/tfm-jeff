@@ -6139,7 +6139,7 @@ location_raw;Índice de Gini;Distribución de la renta P80/P20
 4801302009 Barakaldo sección 02009;28;2,6
 4801302010 Barakaldo sección 02010;29;2,7
 4801302011 Barakaldo sección 02011;25,4;2,1
-Barakaldo sección 02012;30;2,8
+4801302012 Barakaldo sección 02012;30;2,8
 4801303 Barakaldo distrito 03;29,7;2,6
 4801303001 Barakaldo sección 03001;31;2,6
 4801303002 Barakaldo sección 03002;29,6;2,4
@@ -18535,9 +18535,9 @@ Barakaldo sección 02012;30;2,8
 0808601005 Franqueses del Vallès, Les sección 01005;23,4;2,2
 0808601006 Franqueses del Vallès, Les sección 01006;27,3;2,4
 0808601007 Franqueses del Vallès, Les sección 01007;24;2
-Franqueses del Vallès, Les sección 01008;27,4;2,6
-Franqueses del Vallès, Les sección 01009;24,2;2,2
-Franqueses del Vallès, Les sección 01010;26,3;2,5
+0808601008 Franqueses del Vallès, Les sección 01008;27,4;2,6
+0808601009 Franqueses del Vallès, Les sección 01009;24,2;2,2
+0808601010 Franqueses del Vallès, Les sección 01010;26,3;2,5
 0808602 Franqueses del Vallès, Les distrito 02;32,1;2,3
 0808602001 Franqueses del Vallès, Les sección 02001;32,1;2,3
 50110 Frasno, El;32,1;2,5
@@ -21159,7 +21159,7 @@ Franqueses del Vallès, Les sección 01010;26,3;2,5
 4307001 Guiamets, Els distrito 01;27,5;2,2
 4307001001 Guiamets, Els sección 01001;27,5;2,2
 14902 Guijarrosa, La;22,5;2
-Guijarrosa, La distrito 01;22,5;2
+1490201 Guijarrosa, La distrito 01;22,5;2
 1490201001 Guijarrosa, La sección 01001;22,5;2
 37155 Guijo de Ávila;.;.
 3715501 Guijo de Ávila distrito 01;.;.
@@ -55237,7 +55237,3 @@ Guijarrosa, La distrito 01;22,5;2
 0410301001 Zurgena sección 01001;34,2;3,3
 0410302 Zurgena distrito 02;33;2,8
 0410302001 Zurgena sección 02001;33;2,8
-Notas:;;
-;;
-.;;
-Fuente: ;;

@@ -6093,7 +6093,7 @@ location_raw;Fuente de ingreso: salario;Fuente de ingreso: pensiones;Fuente de i
 4801302009 Barakaldo sección 02009;7.105,8;..;..;1.187,4;800
 4801302010 Barakaldo sección 02010;9.772,2;..;..;1.187,4;604
 4801302011 Barakaldo sección 02011;18.987,1;..;..;1.187,4;1.865,6
-Barakaldo sección 02012;11.967;..;..;1.187;1.540
+4801302012 Barakaldo sección 02012;11.967;..;..;1.187;1.540
 4801303 Barakaldo distrito 03;8.427,8;..;..;1.187,4;889,8
 4801303001 Barakaldo sección 03001;7.528,9;..;..;1.187,4;560,1
 4801303002 Barakaldo sección 03002;9.280,1;..;..;1.187,4;829,4
@@ -18464,9 +18464,9 @@ Barakaldo sección 02012;11.967;..;..;1.187;1.540
 0808601005 Franqueses del Vallès, Les sección 01005;10.228;2.264;281;484;862
 0808601006 Franqueses del Vallès, Les sección 01006;12.549;2.326;203;631;1.873
 0808601007 Franqueses del Vallès, Les sección 01007;13.212;1.867;209;451;1.300
-Franqueses del Vallès, Les sección 01008;9.984;1.494;303;872;741
-Franqueses del Vallès, Les sección 01009;12.293;1.935;249;446;1.003
-Franqueses del Vallès, Les sección 01010;9.467;2.905;326;529;862
+0808601008 Franqueses del Vallès, Les sección 01008;9.984;1.494;303;872;741
+0808601009 Franqueses del Vallès, Les sección 01009;12.293;1.935;249;446;1.003
+0808601010 Franqueses del Vallès, Les sección 01010;9.467;2.905;326;529;862
 0808602 Franqueses del Vallès, Les distrito 02;12.807;3.164;209;653;5.135
 0808602001 Franqueses del Vallès, Les sección 02001;12.807;3.164;209;653;5.135
 50110 Frasno, El;7.399;3.909;156;539;1.911
@@ -21088,7 +21088,7 @@ Franqueses del Vallès, Les sección 01010;9.467;2.905;326;529;862
 4307001 Guiamets, Els distrito 01;8.821;4.507;178;517;1.447
 4307001001 Guiamets, Els sección 01001;8.821;4.507;178;517;1.447
 14902 Guijarrosa, La;4.288;2.201;846;361;682
-Guijarrosa, La distrito 01;4.288;2.201;846;361;682
+1490201 Guijarrosa, La distrito 01;4.288;2.201;846;361;682
 1490201001 Guijarrosa, La sección 01001;4.288;2.201;846;361;682
 37155 Guijo de Ávila;.;.;.;.;.
 3715501 Guijo de Ávila distrito 01;.;.;.;.;.
@@ -54872,8 +54872,3 @@ Guijarrosa, La distrito 01;4.288;2.201;846;361;682
 0410301001 Zurgena sección 01001;3.570;3.912;354;475;946
 0410302 Zurgena distrito 02;4.116;3.403;248;444;857
 0410302001 Zurgena sección 02001;4.116;3.403;248;444;857
-Notas:;;;;;
-;;;;;
-.;;;;;
-Estadística experimental;;;;;
-Fuente: ;;;;;
