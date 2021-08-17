@@ -1,2 +1,5 @@
-renta_media.csv - https://www.ine.es/experimental/atlas/exp_atlas_tab.htm dataset "Indicadores de renta media y mediana"
+Renta Ine - https://www.ine.es/experimental/atlas/exp_atlas_tab.htm dataset "Indicadores de renta media y mediana"
+Pisos Turísticos - https://www.ine.es/experimental/viv_turistica/exp_viv_turistica_tablas.htm
+secciones_censales_valencia - https://datos.gob.es/es/catalogo/l01462508-division-de-las-secciones-censales-de-la-ciudad 
+
 
