@@ -1,0 +1,927 @@
+{
+   "html_attributions" : [],
+   "next_page_token" : "Aap_uECDPEfFKkruDMcet2ZmVgQ2jzB_2hZlyNUXBTz9rEYHnJ5h4gb5Z52byRaApO_GaoVtVkNAL0i8xWsUuYg0s2xa3-7O-y3XXVZKpxWxQkF18vDXuWt1LGbvm1cwqgIiH3Lki8ABBkHGPDiCo95Dzc0IB4UiGSIuNAYkOQxECramg1pvhzP_OvdpEif7K4PD6L08eG6EFSEgYzkaeH6MlArJuOh4IvnQxIVVmHfGXBc6jJA-yn0DU_xve1e9oMhJZ5S8R5jnverS5yz2U2kf2hp4ZWNRHTxlDtyo_EfcepTgsdSJgF01RkTyEMmcRCMya2frcxtSVneHSG9bBH3WEshBWiEwY_IheBC_xD-K7CPdIjK8DcAyHLqE4uWoNQ11DlZK8U0Ztum7a-XjyWVNhkFjJhyP",
+   "results" : [
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer del Palleter, 13, 46008 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4686155,
+               "lng" : -0.3860922
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.46996367989272,
+                  "lng" : -0.3846924701072778
+               },
+               "southwest" : {
+                  "lat" : 39.46726402010728,
+                  "lng" : -0.3873921298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "LAVAHOME",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1512,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106955122862831554843\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uECSJkqRSA8FK5AJ_rRUxs6hgLyv61A5T3p9IronqSv5F0d2cms8RIHb26m4NliMArfEmM9ZzCxceGvpxdYEUGI6neGa1hhawfIhidk7hVuVzKfGZjvDlguR7DnziX7UJp89C84R6EB5-keH_2xQoh3dE58WLS_Sd2LQi91gjG2cL8D_",
+               "width" : 2016
+            }
+         ],
+         "place_id" : "ChIJ5XT6WkZPYA0RbY_Ep5qZH2Q",
+         "plus_code" : {
+            "compound_code" : "FJ97+CH Valencia",
+            "global_code" : "8CFXFJ97+CH"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJ5XT6WkZPYA0RbY_Ep5qZH2Q",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 39
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de Campanar, 2, 46920 Mislata, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4774817,
+               "lng" : -0.4185247
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.47879937989272,
+                  "lng" : -0.4169703201072777
+               },
+               "southwest" : {
+                  "lat" : 39.47609972010727,
+                  "lng" : -0.4196699798927221
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Lavandería Autoservicio Rapiddo",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1134,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/108157676448646174765\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uECG6fTC7HNP87sNeoM8khUMcRWedTl-uA0Kg42vBGgYZRa_JQWSCy_hzm-IV7cynDGX0rDjr2Wh9WqH7kO9KqOECnQnt6i5AZ4eLfCSDAF1_aAKdTgqnCwfx3KWq2DOhjDoLwAlt6MGIr1D8ha44KTzC5U3-YE01owHIXeO-2gErkUY",
+               "width" : 1456
+            }
+         ],
+         "place_id" : "ChIJBW1c8oRPYA0RjO2-UrtX0A8",
+         "plus_code" : {
+            "compound_code" : "FHGJ+XH Mislata",
+            "global_code" : "8CFXFHGJ+XH"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJBW1c8oRPYA0RjO2-UrtX0A8",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 49
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de Miguel Servet, 18, 46015 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.487423,
+               "lng" : -0.3934829
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.48875517989273,
+                  "lng" : -0.3921767701072778
+               },
+               "southwest" : {
+                  "lat" : 39.48605552010729,
+                  "lng" : -0.3948764298927223
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "La Colada Benicalap",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 300,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110641864004883931997\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBBrxDpLRLHI2xD0pOBoyHbTcBr-opPNa4ziavM8pA42ta8hmbafb5tDMOxdJuYFUjwbEShbPZ6Rb-M-P3ufp2FSLfNj34OHCiPBpdRD4pujF52_xMCxdS1zwgpAsYvo_lj6q_G_YiLNe3uOHx7dVkG7HnBw6gXRkYxHbt4qqqX8kYP",
+               "width" : 300
+            }
+         ],
+         "place_id" : "ChIJg6SIM_VFYA0ReBB-1JnB4Bw",
+         "plus_code" : {
+            "compound_code" : "FJP4+XJ Valencia",
+            "global_code" : "8CFXFJP4+XJ"
+         },
+         "rating" : 4,
+         "reference" : "ChIJg6SIM_VFYA0ReBB-1JnB4Bw",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 67
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "C/ de Conca, 85, 46007 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4626888,
+               "lng" : -0.389336
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.46406812989272,
+                  "lng" : -0.3880856201072777
+               },
+               "southwest" : {
+                  "lat" : 39.46136847010727,
+                  "lng" : -0.3907852798927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Bugadry • Valencia",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1080,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113042607534400694908\"\u003eИрина Богданова\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEDafo3SJoUze8gdhHSOFuVFdQM3zOVGEyqxsqZhDso9lkXwBnWqY0Gs1j2bjTsOQBNliblU0wSQvkHheUAozryyqeW-6EdHZ0DMX0ITwH1gElq_5hwlj1L0AFMzbTkJAxVNdWHuIlZqGeT3pH-qJHG85sMnmT8M5Tnhc3H2dWfvwLJl",
+               "width" : 1920
+            }
+         ],
+         "place_id" : "ChIJLXLzKD9PYA0RIHI4V9AeZcM",
+         "plus_code" : {
+            "compound_code" : "FJ76+37 Valencia",
+            "global_code" : "8CFXFJ76+37"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJLXLzKD9PYA0RIHI4V9AeZcM",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 33
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de Jacint Labaila, 2, 46007 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.46065,
+               "lng" : -0.3903996
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.46191032989272,
+                  "lng" : -0.3890217201072778
+               },
+               "southwest" : {
+                  "lat" : 39.45921067010728,
+                  "lng" : -0.3917213798927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Lavanderia Autoservicio",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4032,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104213503609646929062\"\u003eAngel Gil\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEC7Z8N5vLmPvzp9Wz1Mnp9grZYxpvVqNtOv_EaKylm3KOFlcXA3occlUnmPUONlZHdgUMY_2ezZQTNO894umUkspNu6_s6_rHPFbQCVry3HRnGB2MarqrXuD0Sl9qy5MlwGrhTLr4qvkw7tNPlDogaIXLy3f_30jsfQbz2bKFNXMtns",
+               "width" : 3024
+            }
+         ],
+         "place_id" : "ChIJZW83lz5PYA0RhgS_4ebjjzA",
+         "plus_code" : {
+            "compound_code" : "FJ65+7R Valencia",
+            "global_code" : "8CFXFJ65+7R"
+         },
+         "rating" : 4.3,
+         "reference" : "ChIJZW83lz5PYA0RhgS_4ebjjzA",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 49
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Avinguda d'Amado Granell Mesado, 7, 46004 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4604514,
+               "lng" : -0.3656249
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.46176277989272,
+                  "lng" : -0.3643704701072778
+               },
+               "southwest" : {
+                  "lat" : 39.45906312010728,
+                  "lng" : -0.3670701298927223
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Lavanderia CE Colada Expres",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3096,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104224616282894467375\"\u003eRicardo Ernesto Gonzalez Nassar\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBRVd1ZPNxF63uIjT8MMoKJy1cbAZMXE8ArfDbeH44Bw9xOm_9ftAevVi6rvWbt-0TzAf8kPndtdtFY3Bhl9RGOCGyyKmdrpsSx2m3KiXL3ZFxI5znB-NK7YDEyGrZOFfs1lATAH3Wq2TfuQItEj8aGc2bjsCiSjg6W38sSVn1mtHCF",
+               "width" : 5504
+            }
+         ],
+         "place_id" : "ChIJAVAZqchIYA0RW3NxOv746vI",
+         "plus_code" : {
+            "compound_code" : "FJ6M+5Q Valencia",
+            "global_code" : "8CFXFJ6M+5Q"
+         },
+         "rating" : 4.7,
+         "reference" : "ChIJAVAZqchIYA0RW3NxOv746vI",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 46
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer dels Sants Just i Pastor, 64, 46022 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.46946500000001,
+               "lng" : -0.347995
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.47085102989272,
+                  "lng" : -0.3466508201072778
+               },
+               "southwest" : {
+                  "lat" : 39.46815137010728,
+                  "lng" : -0.3493504798927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Lavandería Autoservicio Lavanda Laundry Justo y Pastor",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 871,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/107466203596169402745\"\u003eN3 INTEC LAUNDRY\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEABPAvuiVLn8IhCJzlBCtGURbq6gZVwMCPSjjvpLPqEmXpCvPWouep1apwOXbwtGqa0hGrfMJwIK7s7MazD5Uu0QROi2KA7fBPVmEk74nIz8KrrVlIKrWkofot6PVkzwPqotw8sQ8lCEyKWzTR7JeJ1KlUMjYKwsH5WYuVrGZBcNXyj",
+               "width" : 1546
+            }
+         ],
+         "place_id" : "ChIJ-RjWdZhaYA0Ri8jpcoxpgEU",
+         "plus_code" : {
+            "compound_code" : "FM92+QR Valencia",
+            "global_code" : "8CFXFM92+QR"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJ-RjWdZhaYA0Ri8jpcoxpgEU",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 42
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Av. de Burjassot, 184, 46015 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4923722,
+               "lng" : -0.3932723
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.49371177989273,
+                  "lng" : -0.3919616701072777
+               },
+               "southwest" : {
+                  "lat" : 39.49101212010729,
+                  "lng" : -0.3946613298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "WASH & GO LAVANDERÍA AUTOSERVICIO",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2268,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115989257639215418888\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEDXEEeKkIZp_y7ckNiNFH7JD3NYpmL0zHzTDTCSLsmginKIdEiZxn3BvxpBDWPJaYmb647GpUsQN9GJn5wPZHva0gRY-s4wnSM-n1KmR8ldfhOCreWN5XUy-m2KCkULDUanYSsieiIlgRYbM4dpSY1bNBcgLzwR3xVcH4wjYh5MTJFM",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJq4eRzIxFYA0RKeG38b5-z9I",
+         "plus_code" : {
+            "compound_code" : "FJR4+WM Valencia",
+            "global_code" : "8CFXFJR4+WM"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJq4eRzIxFYA0RKeG38b5-z9I",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 44
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "C. del Mestre Sosa, 1, 46007 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4625517,
+               "lng" : -0.3861291
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.46387687989272,
+                  "lng" : -0.3848667701072778
+               },
+               "southwest" : {
+                  "lat" : 39.46117722010727,
+                  "lng" : -0.3875664298927223
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Lavandería Autoservicio Open wash Valencia Jesús",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1200,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/108830476066099770033\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uECVo1fFV7mENzVZAKrORo2Hu8bkdgwf39RmF2nKSK8aY6o0b-Ssu56oGvskfazVDZx2eHIIIvCYhX_t2TMIE1jnjPOqpjgUVoHZalYyXdzjJ2j1r_g8jhIsxDcyAltTujh57ox7iGxU2QJshIxE83stEAahbAhh0dfn0N9jw4AwT2YJ",
+               "width" : 1600
+            }
+         ],
+         "place_id" : "ChIJs-b4CGRPYA0R987ziT5NeHE",
+         "plus_code" : {
+            "compound_code" : "FJ77+2G Valencia",
+            "global_code" : "8CFXFJ77+2G"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJs-b4CGRPYA0R987ziT5NeHE",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 28
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer d'Alcanyís, 36, 46019 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4946917,
+               "lng" : -0.3785937
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.49603347989272,
+                  "lng" : -0.3772784701072778
+               },
+               "southwest" : {
+                  "lat" : 39.49333382010727,
+                  "lng" : -0.3799781298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "The Laundry Room Lavanderías Autoservicio",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1960,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115658328119032629526\"\u003eSamir Rojas\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEDBEYQiG6XAJ6VBhLkbSuntp217rNj1CVWTyeSakKWWUu9wdnotpk3NUAQwTbP62OQ-5toTwaKwezPO4OUc_biQv48lPO8fTRwHLZc5zbQlEB6JLQBlJRyfmkokrhcD95wCrdEYygQLgMcjjSwn2vcf0jNKQ54_42iaLzo-yeuyU7yE",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJLUw2lPxFYA0RWYFfkSDet_g",
+         "plus_code" : {
+            "compound_code" : "FJVC+VH Valencia",
+            "global_code" : "8CFXFJVC+VH"
+         },
+         "rating" : 4.8,
+         "reference" : "ChIJLUw2lPxFYA0RWYFfkSDet_g",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 48
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de l'Alguer, 23, 46022 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4697685,
+               "lng" : -0.3384586
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.47108177989273,
+                  "lng" : -0.3369856701072777
+               },
+               "southwest" : {
+                  "lat" : 39.46838212010728,
+                  "lng" : -0.3396853298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "La Colada de Ana",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3648,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/102077252047899856959\"\u003eJose Manuel Moyano\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEDLqc-8n2XgRExeWjQIlBe5JqtQQ77Z3ees0_HYRbngG0MMNszqmVjy8fdFWzb0JAfLa4k4i0KQaOoVqYQ6hlZz_JXBu9QEw6hIIEZwvC9V_DQvWQ3CSQfxy5oOlNn6Nawyjm60iQjzlzdutL-ppFCp5ocpQFEhp3IEWjVqAHxhcOG4",
+               "width" : 2736
+            }
+         ],
+         "place_id" : "ChIJN4cyO4pIYA0RDe2jcQL6lHE",
+         "plus_code" : {
+            "compound_code" : "FM96+WJ Valencia",
+            "global_code" : "8CFXFM96+WJ"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJN4cyO4pIYA0RDe2jcQL6lHE",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 50
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Avinguda del Doctor Waksman, 9, bajo izquierda, 46006 Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4568266,
+               "lng" : -0.3743761
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.45812222989272,
+                  "lng" : -0.3730992201072778
+               },
+               "southwest" : {
+                  "lat" : 39.45542257010728,
+                  "lng" : -0.3757988798927223
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Lavandería Autoservicio Open Wash Valencia Waksman",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 768,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116101832856914942861\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBcjKWgWdr6lXO63aNcCW-7yxgLbRkT8Gowcz1nrCOrLP-np30EXYYyKlTNJGp2ou6EbM6lXj0-A4jj6yl-twOYX_jS5PQxLdXQp-U_MvB2a3brfrsswXVpQxmtYHQ8ow-ecoS68vOCK9g54bqy8uwlt5aHZq6bTmYHdEVvM0Y1p4yO",
+               "width" : 1024
+            }
+         ],
+         "place_id" : "ChIJTx4amwtJYA0R3fyRfmSDu0o",
+         "plus_code" : {
+            "compound_code" : "FJ4G+P6 Valencia",
+            "global_code" : "8CFXFJ4G+P6"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJTx4amwtJYA0R3fyRfmSDu0o",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 23
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "DENTRO DEL PARQUE (Edificio Arco, Carrer de José Aguilar, 57, Bajo 21, 46022 Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.466765,
+               "lng" : -0.3396693
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.46809412989272,
+                  "lng" : -0.3382397201072778
+               },
+               "southwest" : {
+                  "lat" : 39.46539447010728,
+                  "lng" : -0.3409393798927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "SpeedyWash Lavandería Autoservicio",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3096,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101530981665666934348\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uED7oMeYm8UoUYys_67wLMHr7zscbBGM7AptGnbfy8k7vAYNb6b_Q3lsFv1lhYPNs3xDRQOXFkSkq1gWM10cWAQxwn9qkKg3NEhgUjwqu5WTpXTBK_khafEzZ_QJnA7LdGsH1Fb15mvJfxXKh_gaosz0eYlKnmrJI_73Onq4eXzVQEYU",
+               "width" : 4128
+            }
+         ],
+         "place_id" : "ChIJtR9cHotIYA0R1ooqd75XtpY",
+         "plus_code" : {
+            "compound_code" : "FM86+P4 Valencia",
+            "global_code" : "8CFXFM86+P4"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJtR9cHotIYA0R1ooqd75XtpY",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 28
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Av. del Regne de Valencia, 85, 46006 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4627167,
+               "lng" : -0.3615747
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.46406652989272,
+                  "lng" : -0.3602248701072778
+               },
+               "southwest" : {
+                  "lat" : 39.46136687010728,
+                  "lng" : -0.3629245298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Lavanderías Mr Jeff",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 608,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/115798394987469800721\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEAMcU7MjcRSBZNaVvUcGIeYoIzmYbJi9m7eqWbLTdzsyiYmBiL8IqBTYRgmYtQBw8NJ5qqpcQTfAYvZotnREjwY0oTUwWIrOjeBQ-wtuk5koZkESF1lPTaWLYdLr6AfkbZq9xVkWLmjMi1iYP3foOkuUEwjJuEtHZm20CNJo92tcfBH",
+               "width" : 1080
+            }
+         ],
+         "place_id" : "ChIJ681--8dJYA0REBqs1uXYz2s",
+         "plus_code" : {
+            "compound_code" : "FJ7Q+39 Valencia",
+            "global_code" : "8CFXFJ7Q+39"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJ681--8dJYA0REBqs1uXYz2s",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 26
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de la Vall de la Ballestera, 19, 46015 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4801067,
+               "lng" : -0.395307
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.48151447989272,
+                  "lng" : -0.3939988201072778
+               },
+               "southwest" : {
+                  "lat" : 39.47881482010728,
+                  "lng" : -0.3966984798927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Tintoreria la Bruixeta",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 376,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114181341527175750355\"\u003eTintoreria la Bruixeta\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBFmgHByr0W69eUpj2JKNuK7xmdJGiMGS13CYN0RVob0aUlKHeU_-4AD2EnhEicqVzNHELEwxAeOKlHlU0X_lQ1f3nljCf_GUyz8QlbjjsiD8RoKQjucutd9BYhE1ix-2553ZFqR2lgJGiKXoNe8PLZLPK_ta6reptbUX98PT17E141",
+               "width" : 333
+            }
+         ],
+         "place_id" : "ChIJ9fn6M2dPYA0RNviyESxZytc",
+         "plus_code" : {
+            "compound_code" : "FJJ3+2V Valencia",
+            "global_code" : "8CFXFJJ3+2V"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJ9fn6M2dPYA0RNviyESxZytc",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 22
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de la Senyera, 32, 46004 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4573179,
+               "lng" : -0.3625897
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.45868972989273,
+                  "lng" : -0.3611876701072778
+               },
+               "southwest" : {
+                  "lat" : 39.45599007010728,
+                  "lng" : -0.3638873298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "La Colada",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1080,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112213230469299582475\"\u003eIsaac Mejia\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEAnJC8fsGgWH-iJ6reqLqNYt7KQuQKc6KLR5fAC6gVdrXdQ-sWDbb-lZgH-t5lEhiuPoWQ7nBJhVYSknJgKT1hvkRTxbA5Xbl6ZPK_nPtEfReM6TAjHYaoIi4Wp_Kfm_zMv0_ekkIJ8ft9fVSxN-5FpsKd8ZyZ-jSKK8jcx50b9SXo",
+               "width" : 1920
+            }
+         ],
+         "place_id" : "ChIJYyQ4udVJYA0Rs5YqiOAB6Iw",
+         "plus_code" : {
+            "compound_code" : "FJ4P+WX Valencia",
+            "global_code" : "8CFXFJ4P+WX"
+         },
+         "rating" : 4.7,
+         "reference" : "ChIJYyQ4udVJYA0Rs5YqiOAB6Iw",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 21
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de la Blanqueria, 9, 46003 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.47990360000001,
+               "lng" : -0.377208
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.48125747989273,
+                  "lng" : -0.3758244201072778
+               },
+               "southwest" : {
+                  "lat" : 39.47855782010728,
+                  "lng" : -0.3785240798927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Lavandería Auto-Servicio",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3456,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116887339170480309953\"\u003eConrad Weaver\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uECec9v4JTZ8pBStwvGVChGj5jAMYrCf0Pziz3rk-M-RPgzZ9p_ZpeZ3Fn6AenWQb26SPia61faPtH8xzDKof80q4vvSdVfiXGXSRd-WtudTNqCF6hwr9acYVOYmvNT7Mh1_2bXrezL_a4ygqwxo7gnZImjDFDVqS_mk_nIf8D-pX-h3",
+               "width" : 4608
+            }
+         ],
+         "place_id" : "ChIJqwpknVNPYA0R9IawX_zL2Lo",
+         "plus_code" : {
+            "compound_code" : "FJHF+X4 Valencia",
+            "global_code" : "8CFXFJHF+X4"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJqwpknVNPYA0R9IawX_zL2Lo",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 27
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de Miguel Servet, 28, 46015 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.488497,
+               "lng" : -0.3941267
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.48979757989272,
+                  "lng" : -0.3928344701072777
+               },
+               "southwest" : {
+                  "lat" : 39.48709792010727,
+                  "lng" : -0.3955341298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "Tintoreria Lavanderia Conchi",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 565,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104777669196911134997\"\u003eTintoreria Lavanderia Conchi\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBXrK9jvblEKW5o8w4S4MCg9S1IoqDVIwjumdRTwaAdlI0W8YtSle9qykkDMe5XUFHcykCahuDHalce4G5eiBLJnCFZz9odFZDM8rWzFjsYWcjATEusHW5GhZ5DR96yB2bZXkX51a2XnF_pffxekBicpt9sQ5yiBpdwKHceh5pqoQ-y",
+               "width" : 848
+            }
+         ],
+         "place_id" : "ChIJ0SNMKItFYA0RVHZXdYmzLCg",
+         "plus_code" : {
+            "compound_code" : "FJQ4+98 Valencia",
+            "global_code" : "8CFXFJQ4+98"
+         },
+         "rating" : 4.5,
+         "reference" : "ChIJ0SNMKItFYA0RVHZXdYmzLCg",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 34
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Carrer de la Vall de la Ballestera, 34, 46035 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.4794259,
+               "lng" : -0.3978793
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.48071117989272,
+                  "lng" : -0.3964833701072777
+               },
+               "southwest" : {
+                  "lat" : 39.47801152010727,
+                  "lng" : -0.3991830298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "LAVANDERÍA ECOLAUNDRY",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3040,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101460127352854789427\"\u003eJose L\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uED4zKycvHRkmh9-_Fz9egVm-vMmqfGJnXo9uJ8rqckCUncu-Ikt3XQSojOsteZdlzSCK1p6rAIZgVhMvAoDCK7n2k8uLugmrRaCZ_V3-JgSPgMbwWBZ85w1Yn2n0MCDK1QBzhPlaYVoNO1c-ST92VdFHM4Uu6jRGWps2Ux7XNI7831Q",
+               "width" : 4056
+            }
+         ],
+         "place_id" : "ChIJf9ZRfppPYA0R1ukLuw6BEdM",
+         "plus_code" : {
+            "compound_code" : "FJH2+QR Valencia",
+            "global_code" : "8CFXFJH2+QR"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJf9ZRfppPYA0R1ukLuw6BEdM",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 22
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "formatted_address" : "Avinguda del Cardenal Benlloch, 85, 46021 València, Valencia, España",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.47327,
+               "lng" : -0.3537099
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.47459842989272,
+                  "lng" : -0.3522871701072777
+               },
+               "southwest" : {
+                  "lat" : 39.47189877010727,
+                  "lng" : -0.3549868298927222
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_pinlet",
+         "name" : "LaColada Clean & Dry",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1536,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110441902249300633254\"\u003eA Google User\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBmgbsA8L7xwdwMeJqjXGQHK8fp9yaO-iL-FXo26QUVfJJV-Bm1AYTr2eZjrr8h8_4WhVXOF_yMiAUS4wmBXGjwVKr3lxSKZDytMazidCpYA5W4ubVGOpktLaIzMJiG7yoGyroblK0O3H-Rg58_VsKIzO6slgsgsSlP5-lPsxT_8moW",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJZYcNqpdIYA0RjAQwqcsAdRA",
+         "plus_code" : {
+            "compound_code" : "FJFW+8G Valencia",
+            "global_code" : "8CFXFJFW+8G"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJZYcNqpdIYA0RjAQwqcsAdRA",
+         "types" : [ "laundry", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 21
+      }
+   ],
+   "status" : "OK"
+}
