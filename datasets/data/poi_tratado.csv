@@ -1,4 +1,4 @@
-,name,rating,user_ratings_total,geometry.location.lat,geometry.location.lng,type,coddistsec,subtypes
+,name,rating,user_ratings_total,latitude,longitude,type,coddistsec,subtypes
 0,Parvulario El Belén,0.0,0,39.462611200000005,-0.3820577,education,0336,school
 1,Centro Privado de Educación Infantil Bambini,3.9,7,39.4709818,-0.38383979999999995,education,0301,school
 2,Centro Educación Infantil Bambini 2,4.9,10,39.460225200000004,-0.36857399999999996,education,0221,school

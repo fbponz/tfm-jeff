@@ -1,4 +1,4 @@
-,name,rating,user_ratings_total,geometry.location.lat,geometry.location.lng,type,coddistsec,subtypes
+,name,rating,user_ratings_total,latitude,longitude,type,coddistsec,subtypes
 554,Carmen Laundry Quart,4.4,26,39.477416399999996,-0.3828649,lavanderias,0117,laundry
 555,Ruzafa Laundry,4.7,11,39.461641,-0.37178130000000004,lavanderias,0226,laundry
 557,Colada 30,3.9,20,39.4637344,-0.39825370000000004,lavanderias,0822,laundry
