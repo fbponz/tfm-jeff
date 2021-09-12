@@ -1,61 +1,60 @@
+# Importamos las librerias
+import pandas as pd
 import numpy as np
 from flask import Flask, request, jsonify, render_template, url_for
 import pickle
-from sklearn import svm
+import time
 import streamlit as st
 
 
-# Path del modelo preentrenado
-MODEL_PATH = 'models/pickle_model.pkl'
-
-
-# Se recibe la imagen y el modelo, devuelve la predicción
-def model_prediction(x_in, model):
-
-    x = np.asarray(x_in).reshape(1,-1)
-    preds=model.predict(x)
-
-    return preds
-
 
 def main():
-    
-    model=''
 
-    # Se carga el modelo
-    if model=='':
-        with open(MODEL_PATH, 'rb') as file:
-            model = pickle.load(file)
-    
-    # Título
-    html_temp = """
-    <h1 style="color:#181082;text-align:center;">SISTEMA DE RECOMENDACIÓN PARA CULTIVO </h1>
-    </div>
-    """
-    st.markdown(html_temp,unsafe_allow_html=True)
+    st.set_page_config(layout="wide")
 
-    # Lecctura de datos
-    #Datos = st.text_input("Ingrese los valores : N P K Temp Hum pH lluvia:")
-    N = st.text_input("Nitrógeno:")
-    P = st.text_input("Fósforo:")
-    K = st.text_input("Potasio:")
-    Temp = st.text_input("Temperatura:")
-    Hum = st.text_input("Humedad:")
-    pH = st.text_input("pH:")
-    rain = st.text_input("Lluvia:")
+    # Título del CM
+    st.title('TFM Jeff')
     
-    # El botón predicción se usa para iniciar el procesamiento
-    if st.button("Predicción :"): 
-        #x_in = list(np.float_((Datos.title().split('\t'))))
-        x_in =[np.float_(N.title()),
-                    np.float_(P.title()),
-                    np.float_(K.title()),
-                    np.float_(Temp.title()),
-                    np.float_(Hum.title()),
-                    np.float_(pH.title()),
-                    np.float_(rain.title())]
-        predictS = model_prediction(x_in, model)
-        st.success('EL CULTIVO RECOMENDADO ES: {}'.format(predictS[0]).upper())
+    c1, c2= st.columns((1, 1))
+
+    # Mapa
+    map_data = pd.DataFrame(
+    np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+    columns=['lat', 'lon'])
+
+    st.map(map_data)
+
+    st.text_input("Introduzca la direccion:"
+                    " Ejemplo: Calle ", key="name")
+
+    # You can access the value at any point with:
+    st.session_state.name
+
+    # Gráfico de
+    chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+    c2.bar_chart(chart_data)
+
+      # Gráfico de
+    chart_data2 = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+    c1.bar_chart(chart_data2)
+
+        # Add a selectbox to the sidebar:
+    add_selectbox = st.sidebar.selectbox(
+        'How would you like to be contacted?',
+        ('Email', 'Home phone', 'Mobile phone')
+    )
+
+    # Add a slider to the sidebar:
+    add_slider = st.sidebar.slider(
+        'Select a range of values',
+        0.0, 100.0, (25.0, 75.0)
+    )
 
 if __name__ == '__main__':
     main()
