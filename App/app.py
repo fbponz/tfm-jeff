@@ -13,7 +13,7 @@ def main():
     st.set_page_config(layout="wide")
 
     # Título del CM
-    st.title('TFM Jeff')
+    st.title('Location Intelligence')
     
     c1, c2= st.columns((1, 1))
 
@@ -39,8 +39,8 @@ def main():
 
       # Gráfico de
     chart_data2 = pd.DataFrame(
-     np.random.randn(20, 3),
-     columns=['a', 'b', 'c'])
+     np.random.randn(3, 1),
+     columns=['a'])
 
     c1.bar_chart(chart_data2)
 
