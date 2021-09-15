@@ -15,16 +15,16 @@ def main():
     # Título del CM
     st.title('Location Intelligence')
     
-    c1, c2= st.columns((1, 1))
+    c1, c2= st.columns((3, 4))
 
     # Mapa
     map_data = pd.DataFrame(
     np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
     columns=['lat', 'lon'])
 
-    st.map(map_data)
+    c2.map(map_data)
 
-    st.text_input("Introduzca la direccion:"
+    c1.text_input("Introduzca la direccion:"
                     " Ejemplo: Calle ", key="name")
 
     # You can access the value at any point with:
@@ -35,7 +35,7 @@ def main():
      np.random.randn(20, 3),
      columns=['a', 'b', 'c'])
 
-    c2.bar_chart(chart_data)
+    c1.bar_chart(chart_data)
 
       # Gráfico de
     chart_data2 = pd.DataFrame(
@@ -46,13 +46,13 @@ def main():
 
         # Add a selectbox to the sidebar:
     add_selectbox = st.sidebar.selectbox(
-        'How would you like to be contacted?',
-        ('Email', 'Home phone', 'Mobile phone')
+        'Puntos de interés',
+        ('Lavanderias', 'Hospital', 'Tiendas GGSS')
     )
 
     # Add a slider to the sidebar:
     add_slider = st.sidebar.slider(
-        'Select a range of values',
+        'Radio Km',
         0.0, 100.0, (25.0, 75.0)
     )
 
