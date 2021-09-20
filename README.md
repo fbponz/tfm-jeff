@@ -26,7 +26,13 @@ Para el calculo de la distancia (Dij), se va a utilizar la formula de semiversen
 Para el calculo de atracción se va a utilizar la siguiente formula:
 Atracción tienda = ((Sum(Puntos de Interes)/ Num_Secciones_Censales)-(lavanderias/Num_Secciones_Censales)+(total_poblacion/Num_Secciones_Censales))
 
+### Apartados a visitar:
++ [Datasets](/datasets)
++ [Scripts](/scripts)
++ [API Keys](/keys)
+
 ## POC
+
 Para utilizar el POC, debemos cargar el [notebook](scripts/TFM_POC.ipynb)
 
 Primero se indica la calle sobre la cual se desea calcular el trade catchment area en la siguiente casilla
@@ -36,10 +42,7 @@ Se ejecutan todas las casillas y se obtiene un resultado como el siguiente
 Si se pincha en uno de los marcadores o el circulo que indica la localización de la nueva tienda aparece el siguiente pop-up donde contiene el nombré de la tienda para poder analizar.
 <img align="center" width="1253" height="752" src="/img/Trade_Catchment_Area_Detalle.png">
 
-### Apartados a visitar:
-+ [Datasets](/datasets)
-+ [Scripts](/scripts)
-+ [API Keys](/keys)
+
 ## Futuras Mejoras:
 
 + Modificar el calculo de la distancia mediante la formula de haversine a un método que tengan en cuenta las barreras arquitectónicas.
