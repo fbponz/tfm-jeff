@@ -27,8 +27,8 @@ Para el calculo de atracción se va a utilizar la siguiente formula:
 Atracción tienda = ((Sum(Puntos de Interes)/ Num_Secciones_Censales)-(lavanderias/Num_Secciones_Censales)+(total_poblacion/Num_Secciones_Censales))
 
 ### Apartados a visitar:
-+ Datasets
-+ Scripts
++ [Datasets](/datasets)
++ [Scripts](/scripts)
 
 ## Futuras Mejoras:
 
