@@ -37,8 +37,11 @@ Para utilizar el POC, debemos cargar el [notebook](scripts/TFM_POC.ipynb)
 
 Primero se indica la calle sobre la cual se desea calcular el trade catchment area en la siguiente casilla
 <img align="center" width="532" height="42" src="/img/Trade_Catchment_Area_Street_Name.png">
+
 Se ejecutan todas las casillas y se obtiene un resultado como el siguiente 
+
 <img align="center" width="1253" height="752" src="/img/Trade_Catchment_Area.png">
+
 Si se pincha en uno de los marcadores o el circulo que indica la localización de la nueva tienda aparece el siguiente pop-up donde contiene el nombré de la tienda para poder analizar.
 <img align="center" width="1253" height="752" src="/img/Trade_Catchment_Area_Detalle.png">
 
