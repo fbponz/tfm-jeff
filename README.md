@@ -33,6 +33,7 @@ Atracción tienda = ((Sum(Puntos de Interes)/ Num_Secciones_Censales)-(lavanderi
 ## Futuras Mejoras:
 
 + Modificar el calculo de la distancia mediante la formula de haversine a un método que tengan en cuenta las barreras arquitectónicas.
++ Dividir el campo puntos de interes y ponderarlo por tipos y sub-tipos.
 
 
 
