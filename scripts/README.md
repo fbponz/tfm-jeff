@@ -3,7 +3,7 @@
 
 ### Carpetas:
 
-[TFM_POC.ipynb] es el notebook de la prueba de concepto planteada en este trabajo del TFM.
+[TFM_POC.ipynb](TFM_POC.ipynb) es el notebook de la prueba de concepto planteada en este trabajo del TFM.
 Para ejecutarlo debemos añadir/abrir los siguientes archivos.
 + mapboxkeys.csv
 + dataset_ine_valencia.csv
