@@ -52,7 +52,7 @@ def main():
     data = []
     huff_model = pd.DataFrame(data, columns=[])
     seccensales_geojson = seccensales_data()
-    #laundry, huff_mode = test_output_date()
+    laundry, huff_model = test_output_date()
     #laundry, huff_mode = get_api_output_date('Calle de perez galdos 42, Valencia, Valencia')
 
 
@@ -63,7 +63,7 @@ def main():
     c1, c2= st.columns((8, 5))
     street_name = c1.text_input("Por favor, introduzca una dirección")
     if street_name:
-        laundry, huff_model = get_api_output_date(street_name)
+        #laundry, huff_model = get_api_output_date(street_name)
         print(street_name)
 
 
