@@ -36,7 +36,12 @@ def test_output_date():
     df = pd.json_normalize(api_request['49'])
     data3 = json.loads(df['Prob_Huff'][0])
     df2 = pd.DataFrame.from_dict(data3, orient="index")
-    return df, df2
+    dtst_poi_loc = []
+    df_poi_location = pd.DataFrame(dtst_poi_loc, columns=[])
+    for i in range(len(df['list_of_poi'][0])):
+        df_poi_location = df_poi_location.append(pd.json_normalize(df['list_of_poi'][0][i]),ignore_index=True)
+    return df, df2, df_poi_location
+
 
 def get_api_output_date(street_name):
     r =requests.post('https://europe-west6-tfmedem.cloudfunctions.net/API_TFM', json={'street_name':street_name})
@@ -45,7 +50,11 @@ def get_api_output_date(street_name):
     df = pd.json_normalize(data['49'])
     data3 = json.loads(df['Prob_Huff'][0])
     df2 = pd.DataFrame.from_dict(data3, orient="index")
-    return df, df2
+    dtst_poi_loc = []
+    df_poi_location = pd.DataFrame(dtst_poi_loc, columns=[])
+    for i in range(len(df['list_of_poi'][0])):
+        df_poi_location = df_poi_location.append(pd.json_normalize(df['list_of_poi'][0][i]),ignore_index=True)
+    return df, df2, df_poi_location
 
 def obtener_secciones_censales_lavanderia(df):
     seccensales_list = []
@@ -64,9 +73,9 @@ def main():
     data = []
     huff_model = pd.DataFrame(data, columns=[])
     seccensales_geojson = seccensales_data()
-    laundry, huff_model = test_output_date()
+    laundry, huff_model, list_of_points = test_output_date()
     dataset_ine = dataset_ine_get()
-    #laundry, huff_mode = get_api_output_date('Calle de perez galdos 42, Valencia, Valencia')
+    #laundry, huff_mode, list_of_points = get_api_output_date('Calle de perez galdos 42, Valencia, Valencia')
 
 
 # Título del CM
@@ -81,6 +90,7 @@ def main():
 
     st.dataframe(laundry)
     st.dataframe(dataset_ine)
+    st.dataframe(list_of_points)
     if not huff_model.empty:
 
         # Mapa
