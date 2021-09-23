@@ -33,7 +33,7 @@ def dataset_ine_get():
     return dtst_ine
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def test_output_date():
     with open('data_test/sample.json') as f: 
         api_request = json.load(f)
@@ -46,7 +46,7 @@ def test_output_date():
         df_poi_location = df_poi_location.append(pd.json_normalize(df['list_of_poi'][0][i]),ignore_index=True)
     return df, df2, df_poi_location
 
-
+@st.cache
 def get_api_output_date(street_name):
     r =requests.post('https://europe-west6-tfmedem.cloudfunctions.net/API_TFM', json={'street_name':street_name})
     json_object = json.dumps(r.json(), indent = 4)
@@ -69,9 +69,24 @@ def card_db(string, value):
     card_html = """
     <style>
     .container {
-        background-color: #d4d1d1;
+        background-color: #ECECEC;
+        text-align: center;
+        user-select: none;
+        font-size: 43px;
     }
     .card {
+    }
+    .h4 {
+        background-color: #ECECEC;
+        text-align: center;
+        user-select: none;
+        font-size: 43px;
+    }
+    .h5 {
+        background-color: #ECECEC;
+        text-align: center;
+        user-select: none;
+        font-size: 25px;
     }
     </style> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -80,11 +95,25 @@ def card_db(string, value):
     <div class="card">
         <div class="container">
             <h4><b>"""+string+"""</b></h4> 
-            <p>"""+value+"""</p> 
+            <h5>"""+value+"""</h5> 
         </div>
     </div>
     """
     return card_html
+def text_html(string):
+    txt_html = """
+    <style>
+    .h5 {
+        background-color: #FFFFFF;
+        font-size: 25px;
+    }
+    </style> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <h5><b>"""+string+"""</b></h5> 
+    """
+    return txt_html
 
 
 def DrawLaundry_Points(latitude, longitude, map,string, list_box):
@@ -132,7 +161,7 @@ def main():
             user-select: none;
             font-size: 43px;
             color: black;
-            background-color: #e2e2e2;
+            background-color: #ffffff;
             text-align: center;
             }
             .div {
@@ -142,16 +171,19 @@ def main():
         </style> 
 
         <div class="title">
-            <h1>TFM-Jeff/EDEM - Location Intelligence</h1>
+            <h1>EDEM/Jeff - Location Intelligence</h1>
         </div>
         """
     st.markdown(Title_html, unsafe_allow_html=True)
 
 # Cuadro de introducción texto + bot
-    street_name = st.text_input("Por favor, introduzca una dirección")
+    street_name_prev = ""
+    street_name = st.text_input("Inserte aqui una dirección")
     if street_name:
-        #laundry, huff_model, list_of_points  = get_api_output_date(street_name)
-        print(street_name)
+        if street_name == street_name_prev:
+            #laundry, huff_model, list_of_points  = get_api_output_date(street_name)
+            street_name_prev = street_name
+            print(street_name)
     if not huff_model.empty:
         lavan_card = card_db("Locales Competencia", str(int(laundry['lavanderias'][0])))
         atractividad_card= card_db("Atracción entorno", str(format(laundry['atractividad_percent'][0]*100, ".2f")+"%"))
@@ -161,18 +193,18 @@ def main():
         c2.markdown(atractividad_card, unsafe_allow_html=True)
         c3.markdown(habitantes_card, unsafe_allow_html=True)
 
-        list_multiselect = list_of_points['type'].unique()
         options = st.multiselect(
             'Filtro puntos de interes:',
-            list_multiselect,
-            list_multiselect)
+            list_of_points['type'].unique(),
+            list_of_points['type'].unique())
 
         c1map, c2map= st.columns((8, 5))
-        map = folium.Map(location=[laundry['latitude'], laundry['longitude']], zoom_start=16, tiles='CartoDB positron', width='100%', height='100%')
-        folium.Choropleth(
+        map = folium.Map(location=[laundry['latitude'], laundry['longitude']], zoom_start=16, tiles='stamentoner', width='100%', height='100%')
+        folium.TileLayer('CartoDB positron').add_to(map)
+        choropleth = folium.Choropleth(
             geo_data=seccensales_geojson,
             data=huff_model,
-            name='choropleth', 
+            name='Probabilidad Huff', 
             columns=["properties_coddistsec", "Huff_Prob"],
             key_on="feature.properties.coddistsec",
             fill_color='YlGnBu', 
@@ -181,6 +213,7 @@ def main():
             legend_name='Probabilidad huff',
             smooth_factor=0
         ).add_to(map)
+
         folium.Marker(
             location=[laundry['latitude'], laundry['longitude']],
             popup="Futura Lavanderia",
@@ -198,17 +231,31 @@ def main():
         sim_geo = gpd.GeoSeries(polygon_isochrone).simplify(tolerance=0.001)
         geo_j = sim_geo.to_json()
         geo_j = folium.GeoJson(data=geo_j,
-                           style_function=lambda x: {'fillColor': 'orange'})
+                        name='Isocrona',
+                        style_function=lambda x: {'fillColor': 'orange'})
         folium.Popup(laundry['isochrone_500m']).add_to(geo_j)
         geo_j.add_to(map)
 
+        folium.LayerControl().add_to(map)
+        choropleth.geojson.add_child(
+            folium.features.GeoJsonTooltip(['coddistsec'], labels=False)
+        )
 
         list_of_points.apply(lambda row: DrawLaundry_Points(row['latitude'],row['longitude'],map,row['type'],options), axis=1)
         c1map.map = folium_static(map, 900, 700)
         
+        chart_data = laundry[list_of_points['type'].unique()]
+        chart_data_flip = chart_data.transpose().sort_values(0)
 
-        st.dataframe(laundry)
-        st.dataframe(huff_model)
+        getbestsec= huff_model.nlargest(5, 'Huff_Prob')
+        getbestsec.reindex(getbestsec['properties_coddistsec'].unique())
+
+        
+        st.bar_chart(chart_data_flip)
+        st.bar_chart(getbestsec)
+
+
+
 
 if __name__ == '__main__':
     main()
