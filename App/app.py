@@ -13,6 +13,7 @@ import time
 import streamlit as st
 import folium
 from streamlit_folium import folium_static
+import streamlit.components.v1 as components
 
 @st.cache(allow_output_mutation=True)
 def seccensales_data():
@@ -21,6 +22,12 @@ def seccensales_data():
     for idx in range(len(seccensales_geojson['features'])):
         seccensales_geojson['features'][idx]['properties']['coddistsec'] = int(seccensales_geojson['features'][idx]['properties']['coddistsec'])
     return seccensales_geojson
+
+@st.cache
+def dataset_ine_get():
+    dtst_ine = pd.read_csv('data/dataset_ine_valencia.csv', sep=',', decimal='.')
+    return dtst_ine
+
 
 @st.cache
 def test_output_date():
@@ -40,6 +47,11 @@ def get_api_output_date(street_name):
     df2 = pd.DataFrame.from_dict(data3, orient="index")
     return df, df2
 
+def obtener_secciones_censales_lavanderia(df):
+    seccensales_list = []
+    
+    return seccensales_list
+
 def card_db(string, value):
     st.title(string)
     st.text(value)
@@ -53,6 +65,7 @@ def main():
     huff_model = pd.DataFrame(data, columns=[])
     seccensales_geojson = seccensales_data()
     laundry, huff_model = test_output_date()
+    dataset_ine = dataset_ine_get()
     #laundry, huff_mode = get_api_output_date('Calle de perez galdos 42, Valencia, Valencia')
 
 
@@ -66,8 +79,10 @@ def main():
         #laundry, huff_model = get_api_output_date(street_name)
         print(street_name)
 
-
+    st.dataframe(laundry)
+    st.dataframe(dataset_ine)
     if not huff_model.empty:
+
         # Mapa
             # center on Liberty Bell
         map = folium.Map(location=[39.46994829189022, -0.37787440832473984], width='100%', height='100%')
@@ -87,7 +102,7 @@ def main():
             smooth_factor=0
         ).add_to(map)
         
-        folium_static(map)
+        folium_static(map, 900, 700)
 
 
     # Gráfico de barras 1
