@@ -218,7 +218,7 @@ def renta_media_huff_proba(huff_model, dataset_ine):
     for i in secciones_censales_huff:
         for _, r in dataset_ine.iterrows():
             if r["Code"] == i:
-                renta_media = renta_media+ r["renta_media_hogar"]
+                renta_media = renta_media+ r["Renta neta media por persona "]
     renta_media = (renta_media/5)*1000
     return renta_media, prob_huff_med 
 
@@ -258,7 +258,7 @@ def main():
 
         poi_card = card_db("Puntos de interes totales", str(int(laundry['total_poi'][0])))
         lavan_card = card_db("Lavanderias Competencia", str(int(laundry['lavanderias'][0])))
-        rentamedia_card = card_db("Renta media/hogar", str(int(renta_med))+" €")
+        rentamedia_card = card_db("Renta neta persona", str(int(renta_med))+" €")
         huff_card= card_db("Probabilidad Huff", str(format(prob_huff_med*100, ".2f")+"%"))
         marketpot_card = card_db("Mercado Potencial", str(int(laundry['habitantes_total'][0])))
         marketmeta_card = card_db("Mercado meta", str(int(laundry['habitantes_total'][0]*prob_huff_med)))
