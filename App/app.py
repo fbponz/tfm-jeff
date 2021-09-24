@@ -21,12 +21,25 @@ import geopandas as gpd
 import altair as alt
 
 @st.cache(allow_output_mutation=True)
-def seccensales_data():
+def seccensales_data(dataset_ine):
     with open('data/seccensales.JSON') as f: 
         seccensales_geojson = json.load(f)
     for idx in range(len(seccensales_geojson['features'])):
         seccensales_geojson['features'][idx]['properties']['coddistsec'] = int(seccensales_geojson['features'][idx]['properties']['coddistsec'])
+        seccensales_geojson['features'][idx]['properties']['Seccion Censal'] = seccensales_geojson['features'][idx]['properties']['coddistsec']
+
+        renta_med, habitantes = rentamed_poblacion(seccensales_geojson['features'][idx]['properties']['coddistsec'],dataset_ine)
+        seccensales_geojson['features'][idx]['properties']['Renta Media'] = renta_med
+        seccensales_geojson['features'][idx]['properties']['Habitantes'] = habitantes
     return seccensales_geojson
+
+def rentamed_poblacion(seccioncensal,dataset_ine):
+    #dataset_ine_row = dataset_ine.loc[dataset_ine['Code'] == seccioncensal]
+    #renta_med = dataset_ine_row.renta_media_hogar.values
+    #habitantes = dataset_ine_row.habitantes.values
+    #return renta_med, habitantes
+    return 0, 1
+
 
 @st.cache
 def dataset_ine_get():
@@ -106,6 +119,7 @@ def text_html(string):
     txt_html = """
     <style>
     .h5 {
+        color: #32B0E1;
         background-color: #FFFFFF;
         font-size: 25px;
     }
@@ -158,34 +172,44 @@ def draw_map(laundry, seccensales_geojson, huff_model,list_of_points, options):
 
     folium.LayerControl().add_to(map)
     choropleth.geojson.add_child(
-        folium.features.GeoJsonTooltip(['coddistsec'], labels=False)
+        folium.features.GeoJsonTooltip(['Seccion Censal', 'Renta Media', 'Habitantes'], labels=True)
     )
-    list_of_points.apply(lambda row: DrawLaundry_Points(row['latitude'],row['longitude'],map,row['type'],options), axis=1)
+    list_of_points.apply(lambda row: DrawLaundry_Points(row['latitude'],row['longitude'],map,row['type'],options,laundry), axis=1)
     return map
 
 
-def DrawLaundry_Points(latitude, longitude, map,string, list_box):
+def DrawLaundry_Points(latitude, longitude, map,string, list_box,laundry):
     if string in list_box:
         if(string == "bancos"):
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='blue', icon="euro")).add_to( map )
+            string_popup = "En 500m hay "+str(int(laundry.bancos.values))+" Bancos."
+            folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='blue', icon="euro")).add_to( map )
         elif(string == "education"):
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='blue', icon="book")).add_to( map )
-        elif(string == "supermercados"):
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='blue', icon="shopping-cart")).add_to( map )
+            string_popup = "En 500m hay "+str(int(laundry.education.values))+" Centros Educativos."
+            folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='blue', icon="book")).add_to( map )
         elif(string == "tiendas"):
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='blue', icon="tag")).add_to( map )
+            string_popup = "En 500m hay "+str(int(laundry.tiendas.values))+" Tiendas."
+            folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='blue', icon="tag")).add_to( map )
         elif(string == "lavanderias"):
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='red', icon="tint")).add_to( map )
+            string_popup = "En 500m hay "+str(int(laundry.lavanderias.values))+" lavanderias."
+            folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='red', icon="tint")).add_to( map )
         elif(string == "parques"):
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='green', icon="tree-conifer")).add_to( map )
+            string_popup = "En 500m hay "+str(int(laundry.parques.values))+" parques."
+            folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='green', icon="tree-conifer")).add_to( map )
         elif(string == "gimnasios"):
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='blue', icon="flash")).add_to( map )
+            string_popup = "En 500m hay "+str(int(laundry.gimnasios.values))+" gimnasios."
+            folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='blue', icon="flash")).add_to( map )
         elif(string == "restaurante"):
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='blue', icon="cutlery")).add_to( map )
+            string_popup = "En 500m hay "+str(int(laundry.restaurante.values))+" restaurantes."
+            folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='blue', icon="cutlery")).add_to( map )
         else:
-            folium.Marker(location=[latitude,longitude ],popup=string,icon=folium.Icon(color='blue', icon="info-sign")).add_to( map )
+            string_popup = "Información no disponible"
+            folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='blue', icon="info-sign")).add_to( map )
 
-    
+def renta_media_huff_proba(huff_model, dataset_ine,laundry):
+    lavanderia_seccensal = laundry['coddistsec'].tail(1)
+    #dataset_ine_filtered = dataset_ine[dataset_ine['coddistsec']==lavanderia_seccensal]
+    mejores_seccionales = huff_model.nlargest(5, ['Huff_Prob'])
+    return 12532, 0.2564 
 
 
 def main():
@@ -196,10 +220,11 @@ def main():
     data = []
     huff_model = pd.DataFrame(data, columns=[])
     list_of_points = pd.DataFrame(data, columns=[])
-    seccensales_geojson = seccensales_data()
-    laundry, huff_model, list_of_points = test_output_date()
     dataset_ine = dataset_ine_get()
-    #laundry, huff_model, list_of_points = get_api_output_date('Calle de perez galdos 42, Valencia, Valencia')
+    seccensales_geojson = seccensales_data(dataset_ine)
+
+    laundry, huff_model, list_of_points = test_output_date()
+
 
 
 # Título del CM
@@ -214,18 +239,24 @@ def main():
         if street_name == street_name_prev:
             #laundry, huff_model, list_of_points  = get_api_output_date(street_name)
             street_name_prev = street_name
-            print(street_name)
+
     if not huff_model.empty:
-        lavan_card = card_db("Locales Competencia", str(int(laundry['lavanderias'][0])))
-        atractividad_card= card_db("Atracción entorno", str(format(laundry['atractividad_percent'][0]*100, ".2f")+"%"))
-        habitantes_card = card_db("Mercado total", str(int(laundry['habitantes_total'][0])))
+        #enriquezer el GEOJSON
+        renta_med, prob_huff_med= renta_media_huff_proba(huff_model, dataset_ine, laundry)        
+
+        poi_card = card_db("Total pointers", str(int(laundry['total_poi'][0])))
+        lavan_card = card_db("Lavanderias Competencia", str(int(laundry['lavanderias'][0])))
+        rentamedia_card = card_db("Renta media", str(renta_med))
+        huff_card= card_db("Probabilidad Huff", str(format(prob_huff_med*100, ".2f")+"%"))
+        marketpot_card = card_db("Mercado Potencial", str(int(laundry['habitantes_total'][0])))
+        marketmeta_card = card_db("Mercado meta", str(int(laundry['habitantes_total'][0]*prob_huff_med)))
         c1, c2, c3, c4, c5, c6= st.columns((5, 5, 5, 5, 5, 5))
-        c1.markdown(lavan_card, unsafe_allow_html=True)
-        c2.markdown(atractividad_card, unsafe_allow_html=True)
-        c3.markdown(habitantes_card, unsafe_allow_html=True)
-        c4.markdown(lavan_card, unsafe_allow_html=True)
-        c5.markdown(atractividad_card, unsafe_allow_html=True)
-        c6.markdown(habitantes_card, unsafe_allow_html=True)
+        c1.markdown(poi_card, unsafe_allow_html=True)
+        c2.markdown(lavan_card, unsafe_allow_html=True)
+        c3.markdown(rentamedia_card, unsafe_allow_html=True)
+        c4.markdown(marketpot_card, unsafe_allow_html=True)
+        c5.markdown(huff_card, unsafe_allow_html=True)
+        c6.markdown(marketmeta_card, unsafe_allow_html=True)
         #total puntos de interes
         #lavanderias de la competencia
         #renta neta media por persona(mejores 5 resultados huff, media).
