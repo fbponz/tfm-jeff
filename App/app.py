@@ -34,11 +34,16 @@ def seccensales_data(dataset_ine):
     return seccensales_geojson
 
 def rentamed_poblacion(seccioncensal,dataset_ine):
-    #dataset_ine_row = dataset_ine.loc[dataset_ine['Code'] == seccioncensal]
-    #renta_med = dataset_ine_row.renta_media_hogar.values
-    #habitantes = dataset_ine_row.habitantes.values
-    #return renta_med, habitantes
-    return 0, 1
+    dataset_ine_row = dataset_ine.loc[dataset_ine['Code'] == seccioncensal]
+    if dataset_ine_row.empty:
+        renta_med_conver = 'NaN'
+        habitantes_conver = 'NaN'
+    else:
+        renta_med = dataset_ine_row.renta_media_hogar.values
+        habitantes = dataset_ine_row.habitantes.values
+        renta_med_conver = int(float(renta_med)*1000)
+        habitantes_conver = int(float(habitantes))
+    return renta_med_conver, habitantes_conver
 
 
 @st.cache
@@ -60,7 +65,7 @@ def test_output_date():
         df_poi_location = df_poi_location.append(pd.json_normalize(df['list_of_poi'][0][i]),ignore_index=True)
     return df, df2, df_poi_location
 
-@st.cache
+
 def get_api_output_date(street_name):
     r =requests.post('https://europe-west6-tfmedem.cloudfunctions.net/API_TFM', json={'street_name':street_name})
     json_object = json.dumps(r.json(), indent = 4)
@@ -205,11 +210,17 @@ def DrawLaundry_Points(latitude, longitude, map,string, list_box,laundry):
             string_popup = "Información no disponible"
             folium.Marker(location=[latitude,longitude ],popup=string_popup,icon=folium.Icon(color='blue', icon="info-sign")).add_to( map )
 
-def renta_media_huff_proba(huff_model, dataset_ine,laundry):
-    lavanderia_seccensal = laundry['coddistsec'].tail(1)
-    #dataset_ine_filtered = dataset_ine[dataset_ine['coddistsec']==lavanderia_seccensal]
-    mejores_seccionales = huff_model.nlargest(5, ['Huff_Prob'])
-    return 12532, 0.2564 
+def renta_media_huff_proba(huff_model, dataset_ine):
+    selected_row =huff_model.nlargest(5, ['Huff_Prob'])
+    prob_huff_med = (selected_row['Huff_Prob'].sum()/5)
+    secciones_censales_huff = selected_row['properties_coddistsec'].unique()
+    renta_media = 0
+    for i in secciones_censales_huff:
+        for _, r in dataset_ine.iterrows():
+            if r["Code"] == i:
+                renta_media = renta_media+ r["renta_media_hogar"]
+    renta_media = (renta_media/5)*1000
+    return renta_media, prob_huff_med 
 
 
 def main():
@@ -223,7 +234,7 @@ def main():
     dataset_ine = dataset_ine_get()
     seccensales_geojson = seccensales_data(dataset_ine)
 
-    laundry, huff_model, list_of_points = test_output_date()
+    #laundry, huff_model, list_of_points = test_output_date()
 
 
 
@@ -236,17 +247,18 @@ def main():
     street_name_prev = ""
     street_name = dir1.text_input("Inserte aqui una dirección")
     if street_name:
-        if street_name == street_name_prev:
-            #laundry, huff_model, list_of_points  = get_api_output_date(street_name)
+        if street_name != street_name_prev:
+            print(street_name)
+            laundry, huff_model, list_of_points  = get_api_output_date(street_name)
             street_name_prev = street_name
 
     if not huff_model.empty:
         #enriquezer el GEOJSON
-        renta_med, prob_huff_med= renta_media_huff_proba(huff_model, dataset_ine, laundry)        
+        renta_med, prob_huff_med= renta_media_huff_proba(huff_model, dataset_ine)        
 
-        poi_card = card_db("Total pointers", str(int(laundry['total_poi'][0])))
+        poi_card = card_db("Puntos de interes totales", str(int(laundry['total_poi'][0])))
         lavan_card = card_db("Lavanderias Competencia", str(int(laundry['lavanderias'][0])))
-        rentamedia_card = card_db("Renta media", str(renta_med))
+        rentamedia_card = card_db("Renta media/hogar", str(int(renta_med))+" €")
         huff_card= card_db("Probabilidad Huff", str(format(prob_huff_med*100, ".2f")+"%"))
         marketpot_card = card_db("Mercado Potencial", str(int(laundry['habitantes_total'][0])))
         marketmeta_card = card_db("Mercado meta", str(int(laundry['habitantes_total'][0]*prob_huff_med)))
@@ -257,12 +269,6 @@ def main():
         c4.markdown(marketpot_card, unsafe_allow_html=True)
         c5.markdown(huff_card, unsafe_allow_html=True)
         c6.markdown(marketmeta_card, unsafe_allow_html=True)
-        #total puntos de interes
-        #lavanderias de la competencia
-        #renta neta media por persona(mejores 5 resultados huff, media).
-        # Mercado potencial
-        #Probabilidad huff(mejores 5 resultados huff, media).
-        # Mercado Meta = Población total * Probabilidad huff
 
         options = dir2.multiselect(
             '',
@@ -273,8 +279,7 @@ def main():
 
         map =draw_map(laundry, seccensales_geojson, huff_model, list_of_points, options)
 
-        folium_static(map,2324,800)
-    
+        folium_static(map,2324,800)    
 
 if __name__ == '__main__':
     main()
