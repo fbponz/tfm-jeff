@@ -67,7 +67,7 @@ def test_output_date():
 
 
 def get_api_output_date(street_name):
-    r =requests.post('https://europe-west6-tfmedem.cloudfunctions.net/API_TFM', json={'street_name':street_name})
+    r =requests.post('https://europe-west6-tfmedemv2.cloudfunctions.net/API_TFM', json={'street_name':street_name})
     json_object = json.dumps(r.json(), indent = 4)
     data = json.loads(json_object)
     df = pd.json_normalize(data['49'])
