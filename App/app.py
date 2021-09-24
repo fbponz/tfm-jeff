@@ -18,6 +18,7 @@ import folium
 from streamlit_folium import folium_static
 import streamlit.components.v1 as components
 import geopandas as gpd
+import altair as alt
 
 @st.cache(allow_output_mutation=True)
 def seccensales_data():
@@ -100,6 +101,7 @@ def card_db(string, value):
     </div>
     """
     return card_html
+
 def text_html(string):
     txt_html = """
     <style>
@@ -114,6 +116,52 @@ def text_html(string):
     <h5><b>"""+string+"""</b></h5> 
     """
     return txt_html
+
+def draw_map(laundry, seccensales_geojson, huff_model,list_of_points, options):
+    
+    map = folium.Map(location=[laundry['latitude'], laundry['longitude']], zoom_start=16, tiles='stamentoner')
+    folium.TileLayer('CartoDB positron').add_to(map)
+    choropleth = folium.Choropleth(
+        geo_data=seccensales_geojson,
+        data=huff_model,
+        name='Probabilidad Huff', 
+        columns=["properties_coddistsec", "Huff_Prob"],
+        key_on="feature.properties.coddistsec",
+        fill_color='YlGnBu', 
+        fill_opacity=0.70, 
+        line_opacity=1,
+        legend_name='Probabilidad huff',
+        smooth_factor=0
+    ).add_to(map)
+
+    folium.Marker(
+        location=[laundry['latitude'], laundry['longitude']],
+        popup="Futura Lavanderia",
+        icon=folium.Icon(color='purple', icon="info-sign")).add_to( map )
+    folium.CircleMarker(
+        location=[laundry['latitude'], laundry['longitude']],
+        radius=10,
+        popup="Futura Tienda",
+        color="#f0c33c",
+        fill=True,
+        fill_color="#3186cc",
+    ).add_to(map)
+
+    polygon_isochrone = shapely.wkt.loads(laundry['isochrone_500m'][0])
+    sim_geo = gpd.GeoSeries(polygon_isochrone).simplify(tolerance=0.001)
+    geo_j = sim_geo.to_json()
+    geo_j = folium.GeoJson(data=geo_j,
+                    name='Isocrona',
+                    style_function=lambda x: {'fillColor': 'orange'})
+    folium.Popup(laundry['isochrone_500m']).add_to(geo_j)
+    geo_j.add_to(map)
+
+    folium.LayerControl().add_to(map)
+    choropleth.geojson.add_child(
+        folium.features.GeoJsonTooltip(['coddistsec'], labels=False)
+    )
+    list_of_points.apply(lambda row: DrawLaundry_Points(row['latitude'],row['longitude'],map,row['type'],options), axis=1)
+    return map
 
 
 def DrawLaundry_Points(latitude, longitude, map,string, list_box):
@@ -155,30 +203,13 @@ def main():
 
 
 # Título del CM
-    Title_html = """
-        <style>
-            .title h1{
-            user-select: none;
-            font-size: 43px;
-            color: black;
-            background-color: #ffffff;
-            text-align: center;
-            }
-            .div {
-            background-color: #e2e2e2;
-            text-align: center;
-            }
-        </style> 
-
-        <div class="title">
-            <h1>EDEM/Jeff - Location Intelligence</h1>
-        </div>
-        """
-    st.markdown(Title_html, unsafe_allow_html=True)
+    logo1,logo2, logo3= st.columns((5, 5, 5))
+    logo2.image("img/logo.png")
 
 # Cuadro de introducción texto + bot
+    dir1, dir2= st.columns((5, 5))
     street_name_prev = ""
-    street_name = st.text_input("Inserte aqui una dirección")
+    street_name = dir1.text_input("Inserte aqui una dirección")
     if street_name:
         if street_name == street_name_prev:
             #laundry, huff_model, list_of_points  = get_api_output_date(street_name)
@@ -188,74 +219,31 @@ def main():
         lavan_card = card_db("Locales Competencia", str(int(laundry['lavanderias'][0])))
         atractividad_card= card_db("Atracción entorno", str(format(laundry['atractividad_percent'][0]*100, ".2f")+"%"))
         habitantes_card = card_db("Mercado total", str(int(laundry['habitantes_total'][0])))
-        c1, c2, c3= st.columns((5, 5, 5))
+        c1, c2, c3, c4, c5, c6= st.columns((5, 5, 5, 5, 5, 5))
         c1.markdown(lavan_card, unsafe_allow_html=True)
         c2.markdown(atractividad_card, unsafe_allow_html=True)
         c3.markdown(habitantes_card, unsafe_allow_html=True)
+        c4.markdown(lavan_card, unsafe_allow_html=True)
+        c5.markdown(atractividad_card, unsafe_allow_html=True)
+        c6.markdown(habitantes_card, unsafe_allow_html=True)
+        #total puntos de interes
+        #lavanderias de la competencia
+        #renta neta media por persona(mejores 5 resultados huff, media).
+        # Mercado potencial
+        #Probabilidad huff(mejores 5 resultados huff, media).
+        # Mercado Meta = Población total * Probabilidad huff
 
-        options = st.multiselect(
-            'Filtro puntos de interes:',
+        options = dir2.multiselect(
+            '',
             list_of_points['type'].unique(),
             list_of_points['type'].unique())
 
-        c1map, c2map= st.columns((8, 5))
-        map = folium.Map(location=[laundry['latitude'], laundry['longitude']], zoom_start=16, tiles='stamentoner', width='100%', height='100%')
-        folium.TileLayer('CartoDB positron').add_to(map)
-        choropleth = folium.Choropleth(
-            geo_data=seccensales_geojson,
-            data=huff_model,
-            name='Probabilidad Huff', 
-            columns=["properties_coddistsec", "Huff_Prob"],
-            key_on="feature.properties.coddistsec",
-            fill_color='YlGnBu', 
-            fill_opacity=0.70, 
-            line_opacity=1,
-            legend_name='Probabilidad huff',
-            smooth_factor=0
-        ).add_to(map)
+        st.markdown('###')
 
-        folium.Marker(
-            location=[laundry['latitude'], laundry['longitude']],
-            popup="Futura Lavanderia",
-            icon=folium.Icon(color='purple', icon="info-sign")).add_to( map )
-        folium.CircleMarker(
-            location=[laundry['latitude'], laundry['longitude']],
-            radius=10,
-            popup="Futura Tienda",
-            color="#f0c33c",
-            fill=True,
-            fill_color="#3186cc",
-        ).add_to(map)
+        map =draw_map(laundry, seccensales_geojson, huff_model, list_of_points, options)
 
-        polygon_isochrone = shapely.wkt.loads(laundry['isochrone_500m'][0])
-        sim_geo = gpd.GeoSeries(polygon_isochrone).simplify(tolerance=0.001)
-        geo_j = sim_geo.to_json()
-        geo_j = folium.GeoJson(data=geo_j,
-                        name='Isocrona',
-                        style_function=lambda x: {'fillColor': 'orange'})
-        folium.Popup(laundry['isochrone_500m']).add_to(geo_j)
-        geo_j.add_to(map)
-
-        folium.LayerControl().add_to(map)
-        choropleth.geojson.add_child(
-            folium.features.GeoJsonTooltip(['coddistsec'], labels=False)
-        )
-
-        list_of_points.apply(lambda row: DrawLaundry_Points(row['latitude'],row['longitude'],map,row['type'],options), axis=1)
-        c1map.map = folium_static(map, 900, 700)
-        
-        chart_data = laundry[list_of_points['type'].unique()]
-        chart_data_flip = chart_data.transpose().sort_values(0)
-
-        getbestsec= huff_model.nlargest(5, 'Huff_Prob')
-        getbestsec.reindex(getbestsec['properties_coddistsec'].unique())
-
-        
-        st.bar_chart(chart_data_flip)
-        st.bar_chart(getbestsec)
-
-
-
+        folium_static(map,2324,800)
+    
 
 if __name__ == '__main__':
     main()
