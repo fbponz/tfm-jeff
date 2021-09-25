@@ -65,7 +65,7 @@ def test_output_date():
         df_poi_location = df_poi_location.append(pd.json_normalize(df['list_of_poi'][0][i]),ignore_index=True)
     return df, df2, df_poi_location
 
-
+@st.cache(allow_output_mutation=True)
 def get_api_output_date(street_name):
     r =requests.post('https://europe-west6-tfmedemv2.cloudfunctions.net/API_TFM', json={'street_name':street_name})
     json_object = json.dumps(r.json(), indent = 4)
