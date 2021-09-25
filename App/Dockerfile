@@ -15,9 +15,9 @@ RUN pip install shapely --no-binary shapely
 COPY requirements.txt app/requirements.txt
 RUN pip install -r app/requirements.txt
 
+ENV APP_HOME /app
 # copy into a directory of its own (so it isn't in the toplevel dir)
-COPY . /app
-WORKDIR /app
+WORKDIR $APP_HOME
+COPY . ./
 
-# run it!
-ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8080", "--server.address=0.0.0.0"]
+CMD streamlit run app.py --server.port $PORT
