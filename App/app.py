@@ -248,7 +248,6 @@ def main():
     street_name = dir1.text_input("Inserte aqui una dirección")
     if street_name:
         if street_name != street_name_prev:
-            print(street_name)
             laundry, huff_model, list_of_points  = get_api_output_date(street_name)
             street_name_prev = street_name
 
