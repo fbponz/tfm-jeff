@@ -1,0 +1,14 @@
+version: "3"
+
+services: 
+  streamlit:
+    container_name: Dashboard
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: dashboard
+    ports:
+      - "8080:8080"
+networks:
+  default:
+    driver: bridge

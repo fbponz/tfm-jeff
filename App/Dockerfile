@@ -1,9 +1,16 @@
-FROM python:3.7.8-slim
+FROM continuumio/miniconda3:latest
 
 # remember to expose the port your app'll be exposed on.
 EXPOSE 8080
 
 RUN pip install -U pip
+
+RUN conda install -c conda-forge argon2_cffi 
+RUN pip install geos
+RUN conda install geopandas
+RUN pip install streamlit
+RUN pip install streamlit-folium
+RUN pip install shapely --no-binary shapely
 
 COPY requirements.txt app/requirements.txt
 RUN pip install -r app/requirements.txt

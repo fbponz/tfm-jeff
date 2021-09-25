@@ -1,24 +1,13 @@
 
 # Importamos las librerias
 import pandas as pd
-from pandas.core.frame import DataFrame
-import numpy as np
 import requests
-from flask import Flask, request, jsonify, render_template, url_for
-import pickle
 import json
-import random
-import string
-import time
 import shapely
-from shapely.geometry import shape, GeometryCollection, Point, Polygon
-from shapely import wkt
 import streamlit as st
 import folium
 from streamlit_folium import folium_static
-import streamlit.components.v1 as components
 import geopandas as gpd
-import altair as alt
 
 @st.cache(allow_output_mutation=True)
 def seccensales_data(dataset_ine):
