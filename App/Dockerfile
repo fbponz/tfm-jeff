@@ -7,7 +7,7 @@ RUN pip install -U pip
 
 RUN conda install -c conda-forge argon2_cffi 
 RUN pip install geos
-RUN conda install geopandas
+RUN conda install geopandas numpy
 RUN pip install streamlit
 RUN pip install streamlit-folium
 RUN pip install shapely --no-binary shapely
