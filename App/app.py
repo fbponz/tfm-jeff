@@ -80,7 +80,7 @@ def card_db(string, value):
         background-color: #ECECEC;
         text-align: center;
         user-select: none;
-        font-size: 43px;
+        font-size: 30px;
     }
     .card {
     }
@@ -88,7 +88,7 @@ def card_db(string, value):
         background-color: #ECECEC;
         text-align: center;
         user-select: none;
-        font-size: 43px;
+        font-size: 30px;
     }
     .h5 {
         background-color: #ECECEC;
@@ -244,13 +244,13 @@ def main():
         #enriquezer el GEOJSON
         renta_med, prob_huff_med= renta_media_huff_proba(huff_model, dataset_ine)        
 
-        poi_card = card_db("Puntos de interes totales", str(int(laundry['total_poi'][0])))
+        poi_card = card_db("Puntos de Interes Totales", str(int(laundry['total_poi'][0])))
         lavan_card = card_db("Lavanderias Competencia", str(int(laundry['lavanderias'][0])))
-        rentamedia_card = card_db("Renta neta persona", str(int(renta_med))+" €")
+        rentamedia_card = card_db("Renta Neta Personal", str(int(renta_med))+" €")
         huff_card= card_db("Probabilidad Huff", str(format(prob_huff_med*100, ".2f")+"%"))
         marketpot_card = card_db("Mercado Potencial", str(int(laundry['habitantes_total'][0])))
-        marketmeta_card = card_db("Mercado meta", str(int(laundry['habitantes_total'][0]*prob_huff_med)))
-        c1, c2, c3, c4, c5, c6= st.columns((5, 5, 5, 5, 5, 5))
+        marketmeta_card = card_db("Mercado Meta Final", str(int(laundry['habitantes_total'][0]*prob_huff_med)))
+        c1, c2, c3, c4, c5, c6= st.columns((1, 1, 1, 1, 1, 1))
         c1.markdown(poi_card, unsafe_allow_html=True)
         c2.markdown(lavan_card, unsafe_allow_html=True)
         c3.markdown(rentamedia_card, unsafe_allow_html=True)
@@ -267,7 +267,7 @@ def main():
 
         map =draw_map(laundry, seccensales_geojson, huff_model, list_of_points, options)
 
-        folium_static(map,2324,800)    
+        folium_static(map,1230,600)    
 
 if __name__ == '__main__':
     main()
