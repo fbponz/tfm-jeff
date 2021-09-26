@@ -44,6 +44,13 @@ Se ejecutan todas las casillas y se obtiene un resultado como el siguiente
 Si se pincha en uno de los marcadores o el circulo que indica la localización de la nueva tienda aparece el siguiente pop-up donde contiene el nombré de la tienda para poder analizar.
 <img align="center" width="1253" height="752" src="/img/Trade_Catchment_Area_Detalle.png">
 
+## MVP
+git clone https://github.com/fbponz/tfm-jeff.git
+cd tfm-jeff/App
+docker build -t dashboard .
+
+docker run -p 80:8080 dashboard
+
 
 ## Futuras Mejoras:
 
