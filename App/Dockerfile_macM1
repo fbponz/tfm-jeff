@@ -4,11 +4,9 @@ FROM continuumio/miniconda3:latest
 EXPOSE 8080
 
 RUN pip install -U pip
-
-RUN pip install argon2_cffi==21.1.0 
+RUN pip install argon2-cffi==21.1.0
 RUN pip install geos
-RUN pip install numpy==1.21.2
-RUN pip install geopandas==0.9.0
+RUN conda install geopandas numpy
 RUN pip install streamlit
 RUN pip install streamlit-folium
 RUN pip install shapely --no-binary shapely
